@@ -28,7 +28,6 @@ export default function Index() {
     let { data } = useLoaderData() as LoaderData;
     const [search, setSearch] = useState(useSearchParams()[0].get("q") ?? "");
 
-
     // console.log(Object.keys(data))
     // console.log(typeof data)
     // console.log(data.Zyra.name)
@@ -50,7 +49,13 @@ export default function Index() {
                     name="q"
                     className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full text-lg border-gray-300 px-4 rounded-full"
                     placeholder="Search Champions..."
+                    list="suggestions"
                 />
+                <datalist id="suggestions">
+                    {Object.values(data).map((champion) => {
+                        return <option key={champion.id} value={champion.name} />
+                    })}
+                </datalist>
                 <button
                     type="submit"
                     className="ml-4 inline-flex items-center px-10 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -64,7 +69,9 @@ export default function Index() {
                 className="grid grid-cols-2 gap-x-2 gap-y-4 sm:grid-cols-6 sm:gap-x-4 lg:grid-cols-6 xl:gap-x-4"
             >
 
-                {Object.values(data).map((champion) => (
+                {Object.values(data).filter((item) => {
+                    return search.toLocaleLowerCase() === '' ? item : item.name.toLowerCase().includes(search.toLocaleLowerCase())
+                }).map((champion) => (
                     <li key={champion.id}
                         className={'relative champ-card champ-card-' + champion.id.toLowerCase()}
                     >
