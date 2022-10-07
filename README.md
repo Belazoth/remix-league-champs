@@ -28,7 +28,10 @@ This starts your app in development mode, rebuilding assets on file changes.
 
 ## Deployment
 
-It should be set up so you can commit and push your changes to your repo. Every commit to the `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to your staging environment.
+It should be set up so you can commit and push your changes to your repo. Every commit to the `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to the staging environment.
+
+- main url: https://league-champs-e166.fly.dev/
+- dev url: https://league-champs-e166-staging.fly.dev/
 
 ## GitHub Actions
 
