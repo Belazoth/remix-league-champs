@@ -61,5 +61,5 @@ export async function getCurrentPatch() {
 // search all champs and matches there id's with the variable
 function filterChampsByid(champ_array, s_string) {
     return champ_array.filter(o =>
-        Object.keys(o).some(k => k === 'id' && o[k].toString().toLowerCase().includes(s_string.toString().toLowerCase())));
+        Object.keys(o).some(k => k === 'name' && o[k].toString().toLowerCase().includes(s_string.toString().toLowerCase())));
 }

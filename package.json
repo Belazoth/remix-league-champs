@@ -29,21 +29,23 @@
     "/public/build"
   ],
   "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@heroicons/react": "^1.0.6",
     "@prisma/client": "^4.0.0",
     "@remix-run/node": "^1.6.7",
     "@remix-run/react": "^1.6.7",
     "@remix-run/serve": "^1.6.7",
     "@remix-run/server-runtime": "^1.6.7",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.2",
     "bcryptjs": "^2.4.3",
+    "concurrently": "^7.2.2",
     "isbot": "^3.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tiny-invariant": "^1.2.0",
-    "@heroicons/react": "^1.0.6",
-    "@tailwindcss/aspect-ratio": "^0.4.0",
-    "@tailwindcss/forms": "^0.5.2",
-    "concurrently": "^7.2.2",
-    "tailwindcss": "^3.1.6"
+    "tailwindcss": "^3.1.6",
+    "tiny-invariant": "^1.2.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.3.0",
