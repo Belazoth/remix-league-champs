@@ -26,7 +26,7 @@ I made the app and then transplanted it into the Remix Indie stack, mainly for t
 
 This starts your app in development mode, rebuilding assets on file changes.
 
-## Deployment
+## Deployment - i turned this off due to not using it, so will need to be recreated for it to work
 
 It should be set up so you can commit and push your changes to your repo. Every commit to the `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to the staging environment.
 
